@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ProcessInput();
 
-        KeepPlayerOnScreen();
+      //  KeepPlayerOnScreen();
 
        // RotateToFaceVelocity();
     }
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void KeepPlayerOnScreen()
+    /*private void KeepPlayerOnScreen()
     {
         Vector3 newPosition = transform.position;
         Vector3 viewportPosition = mainCamera.WorldToViewportPoint(transform.position);
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.position = newPosition;
-    }
+    }*/
 
     /*private void RotateToFaceVelocity()
     {
