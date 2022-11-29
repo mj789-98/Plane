@@ -1,2 +1,2 @@
 # Plane
- Plane game to fly away
+ Android game || Controll a plane.
