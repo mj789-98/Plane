@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool gameOver;
 
-  
 
     //variables    
     public float moveSpeed = 300;
