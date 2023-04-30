@@ -3,6 +3,8 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public GameObject projectilePrefab;
+   
+   
 
     void Update()
     {
@@ -25,12 +27,13 @@ public class Shooter : MonoBehaviour
     {
         // Create an instance of the projectile prefab
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
-
+           
         // Get the Rigidbody component of the projectile
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         // Apply a force to the projectile in the forward direction
         rb.AddForce(-transform.right * 1000f);
+       
     }
 }
 
