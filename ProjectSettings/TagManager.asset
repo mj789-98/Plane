@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Blue_Meteor
   - Background
+  - Enemy_Plane
   layers:
   - Default
   - TransparentFX
