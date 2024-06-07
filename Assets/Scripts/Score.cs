@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
@@ -7,11 +8,13 @@ public class Score : MonoBehaviour
     public int score;
     public Text scoreText;
 
+      public TextMeshProUGUI distanceText;
+
     void Update()
     {
         timeElapsed += Time.deltaTime;
         score = CalculateScore();
-        scoreText.text = "Score: " + score;
+        distanceText.text = "Score: " + score;
     }
 
     public int CalculateScore()

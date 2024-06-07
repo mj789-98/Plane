@@ -19546,7 +19546,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!82 &1725796680
@@ -19647,7 +19647,7 @@ AudioSource:
     m_RotationOrder: 4
 --- !u!95 &1725796687
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -19664,7 +19664,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1725796688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19677,10 +19678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6affa64c9fe2bb34cb00ca4b2fca103d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: 0
   moveSpeed: 700
+  smoothness: 1
   character: {fileID: 2132970168135295506}
-  moveSensitivity: 100
 --- !u!198 &1725796690
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -24472,6 +24472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13eb32cbcfeba5c4894c89f94525dfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayInSeconds: 4
+  PlayerMovement: {fileID: 1725796688}
   projectilePrefab: {fileID: 2926213370678486415, guid: 6144dd7808ec27f4b99d5d6dd8239312, type: 3}
 --- !u!82 &1832470526
 AudioSource:

@@ -1,0 +1,21 @@
+Converting script [1 / 2]	[\Scripts\PlayerMovement.cs]
+	Fragments : 6
+		[ 0] : Line:   78	InputProperty touchCount          
+		[ 1] : Line:   80	Other mod.	[Touch]
+		[ 2] : Line:   80	InputMethod   GetTouch            	(0)
+		[ 3] : Line:   98	InputProperty touchCount          
+		[ 4] : Line:  100	InputMethod   GetTouch            	(i)
+		[ 5] : Line:  116	InputMethod   GetTouch            	(i)
+
+Converting script [2 / 2]	[\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs]
+	Fragments : 2
+		[ 0] : Line:   23	InputMethod   GetKeyDown          	(KeyCode.RightArrow)
+		[ 1] : Line:   24	InputMethod   GetKeyDown          	(KeyCode.LeftArrow)
+
+
+2 scripts modified!
+Overwriting actual scripts...
+	[0 / 2] from  [D:/my projects/Plane/CF2-Data/Script-Backups/2024-02-06-09-35\Assets-After/\Scripts\PlayerMovement.cs] to [D:/my projects/Plane/Assets/\Scripts\PlayerMovement.cs]
+	[1 / 2] from  [D:/my projects/Plane/CF2-Data/Script-Backups/2024-02-06-09-35\Assets-After/\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs] to [D:/my projects/Plane/Assets/\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs]
+
+Overwriting COMPLETED!
