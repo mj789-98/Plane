@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5282926625719169825}
   - component: {fileID: 3460633438214992846}
   - component: {fileID: 134333809942404201}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ComPlaneV1_FrontLandingGear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,6 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824354609013801635}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0010583997, y: 0.1396744, z: 1.1518651}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,7 +33,6 @@ Transform:
   m_Children:
   - {fileID: 2172845191970370082}
   m_Father: {fileID: 5180858929285816000}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3460633438214992846
 MeshFilter:
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7370455131416242309}
   - component: {fileID: 8659327470397566464}
   - component: {fileID: 4492593455329833543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ComPlaneV1_LeftLandingGear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,6 +109,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878819777036250117}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1797098, y: 0.17161807, z: -0.113814466}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -116,7 +117,6 @@ Transform:
   m_Children:
   - {fileID: 3394438777762061587}
   m_Father: {fileID: 5180858929285816000}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8659327470397566464
 MeshFilter:
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 7316628906841527240}
   - component: {fileID: 3445952280147325325}
   - component: {fileID: 3232928719766813601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ComPlaneV1_RightLandingGear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,6 +193,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3983511415428430053}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.1797098, y: 0.17161807, z: -0.113814466}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -200,7 +201,6 @@ Transform:
   m_Children:
   - {fileID: 6455917224234507727}
   m_Father: {fileID: 5180858929285816000}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3445952280147325325
 MeshFilter:
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 3394438777762061587}
   - component: {fileID: 5022687743433774516}
   - component: {fileID: 8071471942098314200}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ComPlaneV1_LeftLandingGear_Tires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,13 +277,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4110074437274207931}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.00024722517, y: -0.11146535, z: -0.022653617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7370455131416242309}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5022687743433774516
 MeshFilter:
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 2172845191970370082}
   - component: {fileID: 7389476910551469310}
   - component: {fileID: 4060770290127711910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ComPlaneV1_FrontLandingGear_Tires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,13 +360,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4395457209764941518}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0002473219, y: -0.089292526, z: -0.02289939}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5282926625719169825}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7389476910551469310
 MeshFilter:
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 6455917224234507727}
   - component: {fileID: 922300711918817093}
   - component: {fileID: 479537976539625590}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ComPlaneV1_RightLandingGear_Tires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,13 +443,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4427597759779831064}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.00024724007, y: -0.11146535, z: -0.022653617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7316628906841527240}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &922300711918817093
 MeshFilter:
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 7526151391620746506}
   - component: {fileID: 578061969954343261}
   - component: {fileID: 6410435219472237024}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ComPlaneV1
   m_TagString: Enemy_Plane
   m_Icon: {fileID: 0}
@@ -531,8 +531,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5525295603368428666}
-  m_LocalRotation: {x: -0, y: 0.71618634, z: -0, w: 0.6979092}
-  m_LocalPosition: {x: 0.138574, y: 0, z: -0.14592473}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.9999987, z: -0, w: -0.0016454085}
+  m_LocalPosition: {x: -0.11870417, y: 0, z: -0.39581314}
   m_LocalScale: {x: 1.85, y: 1.85, z: 1.85}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -540,8 +541,7 @@ Transform:
   - {fileID: 7370455131416242309}
   - {fileID: 7316628906841527240}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 91.481, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180.189, z: 0}
 --- !u!33 &8091209493938098533
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -600,9 +600,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5525295603368428666}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5100359542151570705, guid: 744e01d3d39888e4bb092f1d04f82869, type: 3}
@@ -613,10 +621,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5525295603368428666}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -643,9 +662,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5525295603368428666}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 2.2023852, y: 0.5999952, z: 3.1497238}
   m_Center: {x: 0, y: 0.39472133, z: -0.13865933}
 --- !u!114 &6410435219472237024

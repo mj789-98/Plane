@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1265238980352492266}
   - component: {fileID: 5329660254085164}
   - component: {fileID: 2447647962745061683}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,6 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438547467150709632}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: -0.00000017484561}
   m_LocalScale: {x: 10, y: 10, z: 10}
@@ -33,7 +34,6 @@ Transform:
   m_Children:
   - {fileID: 426204403006068575}
   m_Father: {fileID: 3214525508134154404}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1265238980352492266
 MeshFilter:
@@ -93,9 +93,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438547467150709632}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.020304374, y: 0.023046307, z: 0.02193785}
   m_Center: {x: 0.00017097473, y: -0.00047312974, z: -0.0007448214}
 --- !u!1 &2870931819899185694
@@ -110,7 +118,7 @@ GameObject:
   - component: {fileID: 8571022347960630744}
   - component: {fileID: -1214963152167461464}
   - component: {fileID: 3223097735681172100}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BulletTrail_Blue_Animation
   m_TagString: Blue_Meteor
   m_Icon: {fileID: 0}
@@ -124,6 +132,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2870931819899185694}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.93, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
@@ -131,11 +140,10 @@ Transform:
   m_Children:
   - {fileID: 7529075203500335874}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8571022347960630744
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,7 +160,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!54 &-1214963152167461464
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -160,10 +169,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2870931819899185694}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -186,8 +206,29 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7529075203500335874}
     m_Modifications:
+    - target: {fileID: 2140854298081857787, guid: 7ba892263bec55a45b3073eb74e7dc9a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140854298265806263, guid: 7ba892263bec55a45b3073eb74e7dc9a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140854298828979768, guid: 7ba892263bec55a45b3073eb74e7dc9a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140854298884001470, guid: 7ba892263bec55a45b3073eb74e7dc9a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140854299015492738, guid: 7ba892263bec55a45b3073eb74e7dc9a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2140854299015492749, guid: 7ba892263bec55a45b3073eb74e7dc9a, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.06
@@ -256,7 +297,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FX_BulletTrail_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 7624496878921423553, guid: 7ba892263bec55a45b3073eb74e7dc9a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ba892263bec55a45b3073eb74e7dc9a, type: 3}
 --- !u!4 &426204403006068575 stripped
 Transform:
