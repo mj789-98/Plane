@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2447647962745061683}
   m_Layer: 7
   m_Name: test
-  m_TagString: Untagged
+  m_TagString: Blue_Meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 8571022347960630744}
   - component: {fileID: -1214963152167461464}
   - component: {fileID: 3223097735681172100}
+  - component: {fileID: -2047170400002258161}
   m_Layer: 7
   m_Name: BulletTrail_Blue_Animation
   m_TagString: Blue_Meteor
@@ -201,6 +202,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5945bb5f5428f6148b50f8a616522356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2047170400002258161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2870931819899185694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4ab89a208590445bcf5734de04b5b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1001 &5077815536591394789
 PrefabInstance:
   m_ObjectHideFlags: 0

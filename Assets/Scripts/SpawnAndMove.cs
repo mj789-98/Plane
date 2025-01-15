@@ -1,44 +1,100 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class SpawnAndMove : MonoBehaviour 
 {
-    public GameObject[] ballPrefabs;
-    
-    private float spawnLimitYMin = -7;    // Minimum Y position
-    private float spawnLimitYMax = 8;     // Maximum Y position
-    
-    private float spawnPosX = -31;        // Fixed X position
-    private float spawnPosZ = -5;         // Fixed Z position
-    
-    private float startDelay = 5f;
-    private float spawnInterval = 2f;     // Fixed spawn interval
-
-    // Add variables to control rotation
-    public Vector3 spawnRotation = new Vector3(0, 90, 0); // Adjust these values as needed
-    
-    void Start()
+    [System.Serializable]
+    public class Pool
     {
-        if (ballPrefabs.Length == 0)
-        {
-            Debug.LogError("No ball prefabs assigned to the script!");
-            return;
-        }
-        
-        // Start spawning balls at a fixed interval
+        public GameObject prefab;
+        public int size;
+        public Queue<GameObject> pooledObjects;
+    }
+
+    [Header("Spawn Settings")]
+    public Pool[] pools;  // Array of different ball pools
+    public float spawnLimitYMin = -7f;
+    public float spawnLimitYMax = 8f;
+    public float spawnPosX = -31f;
+    public float spawnPosZ = -5f;
+    public float startDelay = 5f;
+    public float spawnInterval = 2f;
+    public Vector3 spawnRotation = new Vector3(0, 90, 0);
+
+    private void Start()
+    {
+        InitializePools();
         InvokeRepeating("SpawnRandomBall", startDelay, spawnInterval);
     }
-    
-    void SpawnRandomBall()
+
+    private void InitializePools()
     {
-        // Generate a random Y position within the specified range
+        foreach (Pool pool in pools)
+        {
+            pool.pooledObjects = new Queue<GameObject>();
+
+            // Create the initial pool of objects
+            for (int i = 0; i < pool.size; i++)
+            {
+                GameObject obj = Instantiate(pool.prefab);
+                obj.SetActive(false);
+                pool.pooledObjects.Enqueue(obj);
+            }
+        }
+    }
+
+    private GameObject GetPooledObject(int poolIndex)
+    {
+        if (poolIndex < 0 || poolIndex >= pools.Length)
+        {
+            Debug.LogError("Invalid pool index!");
+            return null;
+        }
+
+        Pool pool = pools[poolIndex];
+
+        // If there's an inactive object in the pool, use it
+        if (pool.pooledObjects.Count > 0)
+        {
+            GameObject obj = pool.pooledObjects.Dequeue();
+            obj.SetActive(true);
+            return obj;
+        }
+
+        // If we need more objects, create a new one
+        GameObject newObj = Instantiate(pool.prefab);
+        return newObj;
+    }
+
+    private void ReturnToPool(GameObject obj, Pool pool)
+    {
+        obj.SetActive(false);
+        pool.pooledObjects.Enqueue(obj);
+    }
+
+    private void SpawnRandomBall()
+    {
         float randomY = Random.Range(spawnLimitYMin, spawnLimitYMax);
         Vector3 spawnPos = new Vector3(spawnPosX, randomY, spawnPosZ);
-        
-        // Create rotation using Euler angles
         Quaternion rotation = Quaternion.Euler(spawnRotation);
-        
-        // Instantiate a random ball prefab with the specified rotation
-        int ballIndex = Random.Range(0, ballPrefabs.Length);
-        Instantiate(ballPrefabs[ballIndex], spawnPos, rotation);
+
+        int poolIndex = Random.Range(0, pools.Length);
+        GameObject ball = GetPooledObject(poolIndex);
+
+        if (ball != null)
+        {
+            ball.transform.position = spawnPos;
+            ball.transform.rotation = rotation;
+
+            // Automatically return the ball to the pool after some time
+            // You should adjust this based on your game's needs
+            StartCoroutine(ReturnToPoolAfterDelay(ball, pools[poolIndex], 5f));
+        }
+    }
+
+    private System.Collections.IEnumerator ReturnToPoolAfterDelay(GameObject obj, Pool pool, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ReturnToPool(obj, pool);
     }
 }

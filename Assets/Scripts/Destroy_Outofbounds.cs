@@ -15,20 +15,20 @@ public class Destroy_Outofbounds : MonoBehaviour
         // Destroy dogs if x position less than left limit
         if (transform.position.x > rightLimit)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         // Destroy balls if y position is less than bottomLimit
         else if (transform.position.y < bottomLimit)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else if (transform.position.y > topLimit)
         {
-            Destroy (gameObject);
+             gameObject.SetActive(false);
         }
         else if(transform.position.x < leftLimit)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
     }
