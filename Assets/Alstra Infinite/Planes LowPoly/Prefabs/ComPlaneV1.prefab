@@ -609,7 +609,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -653,7 +653,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4ab89a208590445bcf5734de04b5b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  initialSpeed: 10
+  speedIncreaseRate: 0.5
+  maxSpeed: 100
 --- !u!65 &578061969954343261
 BoxCollider:
   m_ObjectHideFlags: 0
