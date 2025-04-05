@@ -10,6 +10,11 @@ public class PauseMenu1 : MonoBehaviour
 
     private void Start()
     {
+        // Ensure panel is inactive on start
+        pauseMenuUI.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1f;
+        
         pauseButton.onClick.AddListener(TogglePauseGame);
     }
 
@@ -41,6 +46,8 @@ public class PauseMenu1 : MonoBehaviour
 
     public void RestartGame()
     {
+        pauseMenuUI.SetActive(false); // Ensure panel is inactive before reload
+        isPaused = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -48,5 +55,23 @@ public class PauseMenu1 : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    // This ensures the panel is inactive if the scene is reloaded from elsewhere
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        pauseMenuUI.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1f;
     }
 }

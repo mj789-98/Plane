@@ -33,17 +33,6 @@ public class Move_Right : MonoBehaviour
 
         // Move the object
         transform.Translate(Vector3.right * currentSpeed * Time.deltaTime, Space.World);
-
-        /*  // If game is not over, move to the left
-          if (!playerControllerScript.gameOver)
-          {*/
-        /*}*/
-
-        /*   // If object goes off screen that is NOT the background, destroy it
-           if (transform.position.x < leftBound && !gameObject.CompareTag("Background"))
-           {
-               Destroy(gameObject);
-           }*/
     }
 
     // Optional: Add this method to get the current speed for other scripts
