@@ -5,21 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class Load_Game : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    // load next level
+    // load level and save current score if going to home screen
     public void LoadLevel(string levelName)
     {
+        // If loading home screen, save current score
+        if (levelName == "Menu")
+        {
+            var scoreObj = FindObjectOfType<Score>();
+            if (scoreObj != null)
+            {
+                GameManager.TrySetNewHighScore(scoreObj.score); // Save the score
+                // HighScoreDisplay in the HomeScene will update itself via OnEnable
+            }
+        }
         SceneManager.LoadScene(levelName);
     }
-
 }
