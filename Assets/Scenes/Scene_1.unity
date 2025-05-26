@@ -13346,6 +13346,10 @@ PrefabInstance:
       value: Plane
       objectReference: {fileID: 0}
     - target: {fileID: 1548217428881594032, guid: 1f5f52e61320b3547b50ce1c9598c841, type: 3}
+      propertyPath: powerPerStar
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548217428881594032, guid: 1f5f52e61320b3547b50ce1c9598c841, type: 3}
       propertyPath: powerBarImage
       value: 
       objectReference: {fileID: 273760785}
